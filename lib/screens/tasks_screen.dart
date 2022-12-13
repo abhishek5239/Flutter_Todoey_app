@@ -41,7 +41,7 @@ class TasksScreen extends StatelessWidget {
                     }),
                   )));
         },
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Colors.blue,
         child: Icon(
           Icons.add,
           size: 40,
