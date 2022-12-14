@@ -6,6 +6,7 @@ import 'package:todoey_flutter/widgets/task_tile.dart';
 import 'package:todoey_flutter/screens/add_task_sheet.dart';
 import 'package:todoey_flutter/module/task.dart';
 import 'package:todoey_flutter/module/task_data.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
 class TasksScreen extends StatelessWidget {
   //function which will return widget
@@ -58,10 +59,20 @@ class TasksScreen extends StatelessWidget {
                 CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 30,
-                  child: Icon(
-                    Icons.list,
-                    size: 30,
-                    color: Colors.deepOrange,
+                  // child: Icon(
+                  //   Icons.list,
+                  //   size: 30,
+                  //   color: Colors.deepOrange,
+                  // ),
+                  child: IconButton(
+                    icon: Icon(
+                      Icons.list,
+                      size: 30,
+                      color: Colors.deepOrange,
+                    ),
+                    onPressed: () {
+                      ZoomDrawer.of(context)!.toggle();
+                    },
                   ),
                 ),
                 SizedBox(
